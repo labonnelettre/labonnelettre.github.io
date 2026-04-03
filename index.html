@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Bonne Lettre — Votre newsletter professionnelle, rédigée par l'IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --vert:    #2D5A3D;
+  --vert-l:  #3D7A52;
+  --vert-xl: #EBF4EE;
+  --vert-xs: #F5FAF6;
+  --creme:   #FAF8F3;
+  --or:      #C9A84C;
+  --or-l:    #F0E4C0;
+  --txt:     #1A1A18;
+  --txt2:    #5A5A52;
+  --txt3:    #9A9A90;
+  --bord:    #E8E4DA;
+  --white:   #FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--creme);color:var(--txt);line-height:1.6;overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,243,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--bord);transition:all .3s;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo-icon{width:32px;height:32px;background:var(--vert);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+.nav-logo-icon svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2;}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--vert);}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-links a{font-size:13px;color:var(--txt2);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--vert);}
+.nav-cta{background:var(--vert);color:#fff;font-size:13px;font-weight:500;padding:9px 20px;border-radius:8px;text-decoration:none;transition:background .2s;}
+.nav-cta:hover{background:var(--vert-l);}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 24px 60px;text-align:center;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(45,90,61,.07) 0%,transparent 70%);pointer-events:none;}
+.hero-pattern{position:absolute;inset:0;opacity:.025;background-image:repeating-linear-gradient(0deg,var(--vert) 0px,var(--vert) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,var(--vert) 0px,var(--vert) 1px,transparent 1px,transparent 40px);pointer-events:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--vert-xl);border:1px solid rgba(45,90,61,.2);border-radius:20px;padding:6px 14px;font-size:12px;font-weight:500;color:var(--vert);margin-bottom:28px;animation:fadeUp .6s ease both;}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--vert);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,68px);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--txt);max-width:820px;margin-bottom:10px;animation:fadeUp .6s .1s ease both;}
+.hero h1 em{font-style:italic;color:var(--vert);}
+.hero-sub{font-size:clamp(15px,2vw,18px);color:var(--txt2);max-width:560px;font-weight:300;margin-bottom:40px;line-height:1.7;animation:fadeUp .6s .2s ease both;}
+.hero-form{display:flex;gap:10px;width:100%;max-width:480px;margin-bottom:16px;animation:fadeUp .6s .3s ease both;}
+.hero-form input{flex:1;padding:14px 18px;border:1.5px solid var(--bord);border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;background:#fff;color:var(--txt);outline:none;transition:border .2s;}
+.hero-form input:focus{border-color:var(--vert);}
+.hero-form input::placeholder{color:var(--txt3);}
+.hero-form button{background:var(--vert);color:#fff;border:none;padding:14px 24px;border-radius:10px;font-size:14px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;white-space:nowrap;transition:background .2s,transform .15s;}
+.hero-form button:hover{background:var(--vert-l);transform:translateY(-1px);}
+.hero-form button:active{transform:translateY(0);}
+.hero-note{font-size:12px;color:var(--txt3);animation:fadeUp .6s .4s ease both;}
+.hero-note span{color:var(--vert);font-weight:500;}
+.hero-proof{display:flex;align-items:center;gap:12px;margin-top:48px;animation:fadeUp .6s .5s ease both;}
+.proof-avatars{display:flex;}
+.proof-avatar{width:32px;height:32px;border-radius:50%;border:2px solid var(--creme);margin-left:-8px;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;color:#fff;}
+.proof-avatar:first-child{margin-left:0;}
+.proof-text{font-size:13px;color:var(--txt2);}
+.proof-text strong{color:var(--txt);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── NEWSLETTER PREVIEW ── */
+.preview-section{padding:0 24px 80px;display:flex;justify-content:center;}
+.preview-wrap{width:100%;max-width:900px;background:#fff;border:1px solid var(--bord);border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.06);}
+.preview-toolbar{background:#F5F4F0;padding:12px 20px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--bord);}
+.tb-dot{width:10px;height:10px;border-radius:50%;}
+.tb-url{flex:1;background:#fff;border-radius:6px;padding:5px 12px;font-size:12px;color:var(--txt3);margin:0 12px;border:1px solid var(--bord);}
+.preview-body{display:grid;grid-template-columns:1fr 1fr;min-height:300px;}
+.preview-left{padding:28px 32px;border-right:1px solid var(--bord);}
+.preview-left h3{font-size:13px;font-weight:500;color:var(--txt3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px;}
+.form-field{margin-bottom:12px;}
+.form-field label{font-size:12px;color:var(--txt2);display:block;margin-bottom:4px;}
+.form-field .ff-input{background:var(--creme);border:1px solid var(--bord);border-radius:8px;padding:9px 12px;font-size:13px;color:var(--txt);width:100%;}
+.gen-btn{width:100%;background:var(--vert);color:#fff;border:none;padding:12px;border-radius:8px;font-size:13px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;margin-top:4px;transition:background .2s;}
+.gen-btn:hover{background:var(--vert-l);}
+.preview-right{padding:0;overflow:hidden;}
+.nl-preview{height:100%;}
+.nl-header-strip{background:var(--vert);padding:16px 24px;}
+.nl-header-co{font-size:10px;font-weight:500;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;}
+.nl-header-title{font-family:'Playfair Display',serif;font-size:16px;color:#fff;font-weight:700;}
+.nl-content{padding:20px 24px;}
+.nl-greeting{font-size:13px;color:var(--txt);margin-bottom:12px;}
+.nl-block{margin-bottom:14px;}
+.nl-block-title{font-size:12px;font-weight:600;color:var(--vert);margin-bottom:5px;display:flex;align-items:center;gap:5px;}
+.nl-block-text{font-size:12px;color:var(--txt2);line-height:1.6;}
+.nl-hl{background:var(--vert-xl);border-left:2px solid var(--vert);padding:8px 12px;border-radius:0 6px 6px 0;font-size:12px;color:var(--vert);margin-bottom:14px;}
+.nl-cta-btn{display:inline-block;background:var(--vert);color:#fff;font-size:12px;font-weight:500;padding:8px 18px;border-radius:6px;text-decoration:none;}
+.nl-footer-strip{background:var(--vert-xs);border-top:1px solid var(--bord);padding:10px 24px;font-size:10px;color:var(--txt3);}
+
+/* ── STATS BAR ── */
+.stats-bar{background:var(--vert);padding:32px 24px;display:flex;justify-content:center;gap:0;}
+.stat{text-align:center;padding:0 48px;border-right:1px solid rgba(255,255,255,.15);}
+.stat:last-child{border:none;}
+.stat-num{font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:#fff;line-height:1;}
+.stat-label{font-size:13px;color:rgba(255,255,255,.65);margin-top:4px;font-weight:300;}
+
+/* ── HOW IT WORKS ── */
+.how{padding:80px 24px;max-width:900px;margin:0 auto;}
+.section-label{font-size:12px;font-weight:500;color:var(--vert);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,40px);font-weight:700;color:var(--txt);margin-bottom:48px;line-height:1.2;}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.step-card{background:#fff;border:1px solid var(--bord);border-radius:16px;padding:28px 24px;position:relative;transition:transform .2s,box-shadow .2s;}
+.step-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(45,90,61,.1);}
+.step-num{font-family:'Playfair Display',serif;font-size:48px;font-weight:800;color:var(--or-l);line-height:1;margin-bottom:12px;}
+.step-icon{width:44px;height:44px;background:var(--vert-xl);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.step-icon svg{width:20px;height:20px;stroke:var(--vert);fill:none;stroke-width:2;}
+.step-title{font-size:15px;font-weight:600;color:var(--txt);margin-bottom:8px;}
+.step-desc{font-size:13px;color:var(--txt2);line-height:1.6;}
+.step-time{display:inline-block;background:var(--vert-xl);color:var(--vert);font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;margin-top:12px;}
+
+/* ── TARGETS ── */
+.targets{background:#fff;padding:80px 24px;border-top:1px solid var(--bord);border-bottom:1px solid var(--bord);}
+.targets-inner{max-width:900px;margin:0 auto;}
+.targets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;}
+.target-card{border:1px solid var(--bord);border-radius:16px;padding:24px;transition:border-color .2s,transform .2s;}
+.target-card:hover{border-color:var(--vert);transform:translateY(-2px);}
+.target-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:22px;}
+.target-name{font-size:15px;font-weight:600;color:var(--txt);margin-bottom:8px;}
+.target-desc{font-size:13px;color:var(--txt2);line-height:1.6;margin-bottom:14px;}
+.target-ex{font-size:12px;color:var(--txt3);font-style:italic;}
+
+/* ── PRICING ── */
+.pricing{padding:80px 24px;max-width:900px;margin:0 auto;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;}
+.price-card{border:1px solid var(--bord);border-radius:16px;padding:28px 24px;background:#fff;position:relative;}
+.price-card.featured{border:2px solid var(--vert);background:var(--vert-xs);}
+.price-badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--vert);color:#fff;font-size:10px;font-weight:600;padding:3px 12px;border-radius:20px;white-space:nowrap;}
+.price-name{font-size:13px;font-weight:500;color:var(--txt2);margin-bottom:8px;}
+.price-amount{font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:var(--txt);line-height:1;}
+.price-amount span{font-size:14px;font-weight:400;font-family:'DM Sans',sans-serif;color:var(--txt3);}
+.price-desc{font-size:13px;color:var(--txt2);margin:12px 0 20px;line-height:1.5;}
+.price-features{list-style:none;margin-bottom:24px;}
+.price-features li{font-size:13px;color:var(--txt2);padding:6px 0;border-bottom:1px solid var(--bord);display:flex;align-items:center;gap:8px;}
+.price-features li:last-child{border:none;}
+.price-features li::before{content:'✓';color:var(--vert);font-weight:600;flex-shrink:0;}
+.price-btn{display:block;text-align:center;padding:12px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;width:100%;transition:all .2s;}
+.price-btn-outline{background:#fff;color:var(--vert);border:1.5px solid var(--vert);}
+.price-btn-outline:hover{background:var(--vert-xl);}
+.price-btn-solid{background:var(--vert);color:#fff;}
+.price-btn-solid:hover{background:var(--vert-l);}
+
+/* ── FAQ ── */
+.faq{background:var(--vert-xs);padding:80px 24px;border-top:1px solid var(--bord);}
+.faq-inner{max-width:680px;margin:0 auto;}
+.faq-item{background:#fff;border:1px solid var(--bord);border-radius:12px;padding:20px 24px;margin-bottom:10px;cursor:pointer;}
+.faq-q{font-size:15px;font-weight:500;color:var(--txt);display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-q::after{content:'+';font-size:20px;color:var(--vert);flex-shrink:0;transition:transform .2s;}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{font-size:13px;color:var(--txt2);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .3s ease,margin .3s ease;}
+.faq-item.open .faq-a{max-height:200px;margin-top:12px;}
+
+/* ── CTA FINAL ── */
+.cta-final{background:var(--vert);padding:80px 24px;text-align:center;}
+.cta-final h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);font-weight:800;color:#fff;margin-bottom:12px;line-height:1.2;}
+.cta-final p{font-size:16px;color:rgba(255,255,255,.7);margin-bottom:36px;font-weight:300;}
+.cta-form{display:flex;gap:10px;justify-content:center;max-width:440px;margin:0 auto 16px;}
+.cta-form input{flex:1;padding:14px 18px;border:none;border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;}
+.cta-form button{background:var(--or);color:#fff;border:none;padding:14px 22px;border-radius:10px;font-size:14px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;white-space:nowrap;transition:opacity .2s;}
+.cta-form button:hover{opacity:.85;}
+.cta-note{font-size:12px;color:rgba(255,255,255,.5);}
+
+/* ── FOOTER ── */
+footer{background:#111;padding:32px 40px;display:flex;justify-content:space-between;align-items:center;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:15px;color:#fff;font-weight:700;}
+.footer-logo span{color:var(--or);}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:12px;color:#666;text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:#fff;}
+.footer-copy{font-size:12px;color:#444;}
+
+/* ── SUCCESS STATE ── */
+.success-msg{display:none;text-align:center;padding:14px 20px;background:var(--vert-xl);border:1px solid rgba(45,90,61,.2);border-radius:10px;font-size:14px;color:var(--vert);font-weight:500;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:680px){
+  nav{padding:0 16px;}
+  .nav-links{display:none;}
+  .preview-body{grid-template-columns:1fr;}
+  .preview-right{display:none;}
+  .steps-grid,.targets-grid,.pricing-grid{grid-template-columns:1fr;}
+  .stat{padding:0 24px;}
+  .hero-form{flex-direction:column;}
+  .cta-form{flex-direction:column;}
+  .stats-bar{flex-wrap:wrap;gap:24px;}
+  .stat{border:none;}
+  footer{flex-direction:column;gap:16px;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </div>
+    <span class="nav-logo-text">La Bonne Lettre</span>
+  </div>
+  <div class="nav-links">
+    <a href="#comment">Comment ça marche</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="#inscription" class="nav-cta">Accès bêta gratuit</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+
+  <div class="hero-badge">
+    <span class="hero-badge-dot"></span>
+    Bêta ouverte — Places limitées
+  </div>
+
+  <h1>Votre newsletter professionnelle,<br><em>rédigée en 60 secondes</em></h1>
+  <p class="hero-sub">Fidélisez vos clients sans effort. Renseignez 3 informations, l'IA rédige une newsletter impeccable, vous l'envoyez. C'est tout.</p>
+
+  <div class="hero-form" id="inscription">
+    <input type="email" id="hero-email" placeholder="votre@cabinet.fr" />
+    <button onclick="handleSignup('hero-email','hero-success')">Accès bêta gratuit →</button>
+  </div>
+  <div class="success-msg" id="hero-success">✓ Parfait ! Vous recevrez votre accès bêta sous 24h.</div>
+  <p class="hero-note">Sans carte bancaire · <span>14 jours gratuits</span> · Annulation en 1 clic</p>
+
+  <div class="hero-proof">
+    <div class="proof-avatars">
+      <div class="proof-avatar" style="background:#2D5A3D;">ML</div>
+      <div class="proof-avatar" style="background:#3D7A52;">CA</div>
+      <div class="proof-avatar" style="background:#C9A84C;">DP</div>
+      <div class="proof-avatar" style="background:#5A5A52;">RB</div>
+    </div>
+    <p class="proof-text"><strong>47 professionnels</strong> déjà inscrits en bêta</p>
+  </div>
+</section>
+
+<!-- NEWSLETTER PREVIEW -->
+<section class="preview-section">
+  <div class="preview-wrap">
+    <div class="preview-toolbar">
+      <div class="tb-dot" style="background:#FF5F57;"></div>
+      <div class="tb-dot" style="background:#FFBD2E;"></div>
+      <div class="tb-dot" style="background:#28CA41;"></div>
+      <div class="tb-url">labonnelettre.com — Génération en cours…</div>
+    </div>
+    <div class="preview-body">
+      <div class="preview-left">
+        <h3>Vos informations</h3>
+        <div class="form-field">
+          <label>Secteur d'activité</label>
+          <div class="ff-input">Cabinet comptable</div>
+        </div>
+        <div class="form-field">
+          <label>Actualités du mois</label>
+          <div class="ff-input" style="font-size:12px;color:#666;">Clôture annuelle 2025, deadline 30 avril, deux nouveaux collaborateurs…</div>
+        </div>
+        <div class="form-field">
+          <label>Ton souhaité</label>
+          <div class="ff-input">Professionnel & chaleureux</div>
+        </div>
+        <button class="gen-btn">Générer ma newsletter →</button>
+      </div>
+      <div class="preview-right">
+        <div class="nl-preview">
+          <div class="nl-header-strip">
+            <div class="nl-header-co">Cabinet Durand & Associés</div>
+            <div class="nl-header-title">La Lettre du Cabinet · Avril 2026</div>
+          </div>
+          <div class="nl-content">
+            <div class="nl-greeting">Chers clients,</div>
+            <div class="nl-hl">📅 La deadline de dépôt des bilans approche : <strong>30 avril 2026</strong>. Notre équipe est mobilisée pour vous accompagner.</div>
+            <div class="nl-block">
+              <div class="nl-block-title">🎉 Vie du cabinet</div>
+              <div class="nl-block-text">Nous accueillons deux nouveaux collaborateurs qui renforcent notre équipe pour mieux vous servir.</div>
+            </div>
+            <div class="nl-block">
+              <div class="nl-block-title">📌 À retenir ce mois</div>
+              <div class="nl-block-text">Liasse fiscale (régime réel) : avant le <strong>15 mai</strong>. Contactez-nous dès maintenant pour anticiper.</div>
+            </div>
+            <a class="nl-cta-btn" href="#">Prendre rendez-vous →</a>
+          </div>
+          <div class="nl-footer-strip">Cabinet Durand & Associés · Se désabonner</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">60s</div><div class="stat-label">Pour générer une newsletter</div></div>
+  <div class="stat"><div class="stat-num">98%</div><div class="stat-label">De marge nette pour vous</div></div>
+  <div class="stat"><div class="stat-num">0</div><div class="stat-label">Compétence technique requise</div></div>
+  <div class="stat"><div class="stat-num">+40%</div><div class="stat-label">Taux d'ouverture moyen</div></div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="comment">
+  <div class="section-label">Comment ça marche</div>
+  <div class="section-title">Trois étapes.<br>Une newsletter parfaite.</div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      </div>
+      <div class="step-title">Renseignez 3 informations</div>
+      <div class="step-desc">Votre secteur, les actualités du mois, le ton souhaité. Pas de rédaction, pas de mise en page. Juste les faits.</div>
+      <span class="step-time">⏱ 2 minutes</span>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div class="step-title">L'IA rédige pour vous</div>
+      <div class="step-desc">Notre intelligence artificielle génère une newsletter professionnelle, adaptée à votre secteur et à votre clientèle.</div>
+      <span class="step-time">⏱ 60 secondes</span>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </div>
+      <div class="step-title">Validez et envoyez</div>
+      <div class="step-desc">Relisez, modifiez si besoin, puis envoyez à tous vos contacts en un clic. Les statistiques arrivent automatiquement.</div>
+      <span class="step-time">⏱ 1 minute</span>
+    </div>
+  </div>
+</section>
+
+<!-- TARGETS -->
+<section class="targets">
+  <div class="targets-inner">
+    <div class="section-label">Fait pour vous</div>
+    <div class="section-title">Conçu pour les<br>professionnels francophones</div>
+    <div class="targets-grid">
+      <div class="target-card">
+        <div class="target-icon" style="background:#EBF4EE;">📊</div>
+        <div class="target-name">Cabinets comptables</div>
+        <div class="target-desc">Partagez les actualités fiscales, anticipez les deadlines de vos clients et fidélisez votre portefeuille sans effort supplémentaire.</div>
+        <div class="target-ex">"La lettre mensuelle que mes clients attendaient sans que j'aie le temps de la rédiger."</div>
+      </div>
+      <div class="target-card">
+        <div class="target-icon" style="background:#FDF0D5;">⚖️</div>
+        <div class="target-name">Avocats & notaires</div>
+        <div class="target-desc">Informez vos clients des évolutions juridiques, valorisez votre expertise et entretenez le lien avec votre clientèle existante.</div>
+        <div class="target-ex">"Un outil de développement client que je n'aurais jamais pris le temps de mettre en place moi-même."</div>
+      </div>
+      <div class="target-card">
+        <div class="target-icon" style="background:#F0EBF8;">💡</div>
+        <div class="target-name">Coaches & consultants</div>
+        <div class="target-desc">Maintenez le contact avec vos prospects et clients entre deux missions. Partagez vos insights, vos offres et votre actualité.</div>
+        <div class="target-ex">"Je publie enfin régulièrement sans y consacrer une demi-journée par mois."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="tarifs">
+  <div class="section-label">Tarifs</div>
+  <div class="section-title">Simple et transparent.<br>Sans surprise.</div>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-name">Starter</div>
+      <div class="price-amount">29 <span>€/mois</span></div>
+      <div class="price-desc">Pour démarrer et fidéliser votre clientèle existante.</div>
+      <ul class="price-features">
+        <li>1 newsletter par mois</li>
+        <li>Jusqu'à 500 contacts</li>
+        <li>1 secteur d'activité</li>
+        <li>Statistiques de base</li>
+        <li>Support par email</li>
+      </ul>
+      <button class="price-btn price-btn-outline" onclick="document.getElementById('hero-email').focus();document.getElementById('top').scrollIntoView();">Essai gratuit 14 jours</button>
+    </div>
+    <div class="price-card featured">
+      <div class="price-badge">⭐ Le plus populaire</div>
+      <div class="price-name">Professionnel</div>
+      <div class="price-amount">59 <span>€/mois</span></div>
+      <div class="price-desc">Pour les cabinets qui veulent communiquer régulièrement.</div>
+      <ul class="price-features">
+        <li>2 newsletters par mois</li>
+        <li>Jusqu'à 2 000 contacts</li>
+        <li>Personnalisation avancée</li>
+        <li>Statistiques complètes</li>
+        <li>A/B test sur l'objet</li>
+        <li>Support prioritaire</li>
+      </ul>
+      <button class="price-btn price-btn-solid" onclick="document.getElementById('hero-email').focus();document.getElementById('top').scrollIntoView();">Essai gratuit 14 jours</button>
+    </div>
+    <div class="price-card">
+      <div class="price-name">Cabinet & Agence</div>
+      <div class="price-amount">129 <span>€/mois</span></div>
+      <div class="price-desc">Pour gérer la communication de plusieurs entités ou clients.</div>
+      <ul class="price-features">
+        <li>Newsletters illimitées</li>
+        <li>Contacts illimités</li>
+        <li>Multi-clients</li>
+        <li>Marque blanche</li>
+        <li>Accès API</li>
+        <li>Gestionnaire de compte dédié</li>
+      </ul>
+      <button class="price-btn price-btn-outline" onclick="document.getElementById('hero-email').focus();document.getElementById('top').scrollIntoView();">Nous contacter</button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="section-label" style="text-align:center;">Questions fréquentes</div>
+    <div class="section-title" style="text-align:center;margin-bottom:32px;">Tout ce que vous<br>voulez savoir</div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Ai-je besoin de compétences techniques pour utiliser La Bonne Lettre ?</div>
+      <div class="faq-a">Non, aucune. Si vous savez utiliser un email, vous savez utiliser La Bonne Lettre. L'interface est conçue pour être intuitive, et notre équipe vous accompagne lors de la prise en main.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Puis-je relire et modifier la newsletter avant de l'envoyer ?</div>
+      <div class="faq-a">Absolument. L'IA génère une proposition que vous pouvez modifier librement avant l'envoi. Vous gardez le contrôle total sur le contenu. Vous pouvez également régénérer une nouvelle version si le résultat ne vous convient pas.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Mes données et celles de mes clients sont-elles sécurisées ?</div>
+      <div class="faq-a">Oui. Toutes les données sont hébergées en France et traitées conformément au RGPD. Vos listes de contacts ne sont jamais partagées ou utilisées à d'autres fins que l'envoi de vos newsletters.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Puis-je importer ma liste de contacts existante ?</div>
+      <div class="faq-a">Oui, vous pouvez importer vos contacts au format CSV depuis n'importe quel outil (Excel, votre logiciel de gestion, etc.). La migration est simple et notre support vous guide si besoin.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Que se passe-t-il à la fin des 14 jours d'essai ?</div>
+      <div class="faq-a">Vous choisissez l'offre qui vous convient et renseignez vos informations de paiement. Si vous ne souhaitez pas continuer, votre compte est simplement désactivé — sans frais, sans engagement.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <h2>Prêt à fidéliser<br>vos clients sans effort ?</h2>
+  <p>Rejoignez les professionnels qui communiquent mieux,<br>en moins de temps.</p>
+  <div class="cta-form">
+    <input type="email" id="cta-email" placeholder="votre@cabinet.fr" />
+    <button onclick="handleSignup('cta-email','cta-success')">Commencer gratuitement</button>
+  </div>
+  <div class="success-msg" id="cta-success" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff;display:none;">✓ Parfait ! Vous recevrez votre accès bêta sous 24h.</div>
+  <p class="cta-note">Sans carte bancaire · 14 jours gratuits · Annulation à tout moment</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">La Bonne <span>Lettre</span></div>
+  <div class="footer-links">
+    <a href="#">Mentions légales</a>
+    <a href="#">Confidentialité</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 La Bonne Lettre</div>
+</footer>
+
+<script>
+function handleSignup(inputId, successId) {
+  const input = document.getElementById(inputId);
+  const success = document.getElementById(successId);
+  const email = input.value.trim();
+  if (!email || !email.includes('@')) {
+    input.style.borderColor = '#e74c3c';
+    input.placeholder = 'Email invalide';
+    setTimeout(() => {
+      input.style.borderColor = '';
+      input.placeholder = 'votre@cabinet.fr';
+    }, 2000);
+    return;
+  }
+  input.style.display = 'none';
+  input.closest('.hero-form, .cta-form').querySelector('button').style.display = 'none';
+  success.style.display = 'block';
+}
+
+function toggleFaq(el) {
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) el.classList.add('open');
+}
+
+// Smooth nav shadow on scroll
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  nav.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,.08)' : 'none';
+});
+</script>
+</body>
+</html>
