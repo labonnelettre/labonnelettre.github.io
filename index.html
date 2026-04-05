@@ -6,6 +6,28 @@
 <title>La Bonne Lettre — Votre newsletter professionnelle, rédigée par l'IA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<style>
+.sib-form { background: transparent !important; padding: 0 !important; margin: 0 !important; }
+#sib-form-container, #sib-container { background: transparent !important; border: none !important; max-width: 100% !important; padding: 0 !important; }
+#sib-form .entry__label { display: none !important; }
+.sib-form__declaration { display: none !important; }
+#sib-form .form__label-row { margin: 0 !important; }
+#sib-form .sib-form-block { padding: 0 !important; }
+#sib-form .form__entry { margin: 0 !important; }
+#sib-form input[type="text"].input { box-sizing: border-box !important; }
+#sib-form .sib-form-block__button { background: var(--vert) !important; border-radius: 10px !important; font-family: 'DM Sans', sans-serif !important; font-size: 14px !important; padding: 14px 20px !important; width: auto !important; transition: background .2s !important; white-space: nowrap !important; border: none !important; box-shadow: none !important; outline: none !important; }
+#sib-form .sib-form-block__button:hover { background: var(--vert-l) !important; box-shadow: none !important; }
+#sib-form .sib-form-block__button::after, #sib-form .sib-form-block__button::before { display: none !important; }
+.sib-form-block__button-with-loader::after { display: none !important; }
+#sib-container .sib-form-block { border: none !important; box-shadow: none !important; }
+.g-recaptcha, .g-recaptcha-v3, .grecaptcha-badge { display:none !important; visibility:hidden !important; width:0 !important; height:0 !important; overflow:hidden !important; position:absolute !important; }
+.hero-brevo-row { display: flex !important; gap: 10px !important; align-items: center !important; width: 100% !important; }
+.hero-brevo-row .sib-input { flex: 1 !important; }
+.hero-brevo-row .entry__field { margin: 0 !important; }
+.hero-brevo-row input[type="text"].input { width: 100% !important; padding: 14px 18px !important; border: 1.5px solid var(--bord) !important; border-radius: 10px !important; font-size: 14px !important; font-family: 'DM Sans', sans-serif !important; background: #fff !important; color: var(--txt) !important; outline: none !important; box-sizing: border-box !important; }
+.hero-brevo-row input[type="text"].input:focus { border-color: var(--vert) !important; }
+</style>
 <style>
 :root {
   --vert:    #2D5A3D;
@@ -223,12 +245,60 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
   <h1>Votre newsletter professionnelle,<br><em>rédigée en 60 secondes</em></h1>
   <p class="hero-sub">Fidélisez vos clients sans effort. Renseignez 3 informations, l'IA rédige une newsletter impeccable, vous l'envoyez. C'est tout.</p>
 
-  <div class="hero-form" id="inscription">
-    <input type="email" id="hero-email" placeholder="votre@cabinet.fr" />
-    <button onclick="handleSignup('hero-email','hero-success')">Accès bêta gratuit →</button>
+  <div id="inscription" style="width:100%;max-width:480px;animation:fadeUp .6s .3s ease both;">
+    <div class="sib-form">
+      <div id="sib-form-container" class="sib-form-container">
+        <div id="error-message" class="sib-form-message-panel" style="font-size:14px;text-align:left;font-family:'DM Sans',sans-serif;color:#661d1d;background-color:#ffeded;border-radius:10px;border-color:#ff4949;max-width:480px;display:none;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">Nous n'avons pas pu confirmer votre inscription.</span>
+          </div>
+        </div>
+        <div id="success-message" class="sib-form-message-panel" style="font-size:14px;text-align:left;font-family:'DM Sans',sans-serif;color:#085229;background-color:#e7faf0;border-radius:10px;border-color:#13ce66;max-width:480px;display:none;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">✓ Merci ! Vérifiez votre boîte mail pour confirmer votre inscription.</span>
+          </div>
+        </div>
+        <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center;background-color:transparent;max-width:480px;border-radius:10px;border-width:0px;direction:ltr">
+          <form id="sib-form" method="POST" action="https://c2330ae1.sibforms.com/serve/MUIFAEXjbO9ZV54MWWykhYkgxHVzs7UP3_olNVfpuRpZ6tp7otO_z_7LFh16QfFfYOeAVkHrS0jDn0mvchAY45FXiNZdZ07WCFz4YYOy-4NzxRgNogwHVOml4B8A18uxYhxCxe5u26YJOm-Zi09nsEJiq0739DHXoTZl9IJH2S_T-0STXJx7w3wrw7U2DNDGv1m-VeTWvJOwkmdsQg==" data-type="subscription">
+            <div class="hero-brevo-row" style="margin-bottom:8px;">
+              <div class="sib-input sib-form-block">
+                <div class="form__entry entry_block">
+                  <div class="form__label-row">
+                    <div class="entry__field">
+                      <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="votre@cabinet.fr" data-required="true" required />
+                    </div>
+                  </div>
+                  <label class="entry__error entry__error--primary" style="font-size:13px;font-family:'DM Sans',sans-serif;color:#661d1d;"></label>
+                </div>
+              </div>
+              <div style="flex-shrink:0;">
+                <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:14px;font-weight:500;font-family:'DM Sans',sans-serif;color:#FFFFFF;background-color:var(--vert);border-radius:10px;border-width:0px;padding:14px 20px;cursor:pointer;" form="sib-form" type="submit">
+                  Accès bêta gratuit →
+                </button>
+              </div>
+            </div>
+            <div class="sib-optin sib-form-block" style="margin-bottom:8px;">
+              <div class="form__entry entry_mcq">
+                <div class="form__label-row">
+                  <div class="entry__choice">
+                    <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
+                      <input type="checkbox" class="input_replaced" value="1" id="RGPD" name="RGPD" style="margin-top:3px;" />
+                      <span style="font-size:11px;color:var(--txt3);font-family:'DM Sans',sans-serif;line-height:1.5;">J'accepte de recevoir des emails et confirme avoir pris connaissance de la politique de confidentialité. <em>Désabonnement possible à tout moment.</em></span>
+                    </label>
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary" style="font-size:13px;font-family:'DM Sans',sans-serif;color:#661d1d;"></label>
+              </div>
+            </div>
+            <div class="g-recaptcha-v3" data-sitekey="6LdZQqcsAAAAAE3A0tzuec4HJYqzGyndKvo2WxOk" style="display:none;visibility:hidden;width:0;height:0;overflow:hidden;position:absolute;"></div>
+            <input type="text" name="email_address_check" value="" class="input--hidden">
+            <input type="hidden" name="locale" value="fr">
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="success-msg" id="hero-success">✓ Parfait ! Vous recevrez votre accès bêta sous 24h.</div>
-  <p class="hero-note">Sans carte bancaire · <span>14 jours gratuits</span> · Annulation en 1 clic</p>
+  <p class="hero-note" style="animation:fadeUp .6s .4s ease both;">Sans carte bancaire · <span>14 jours gratuits</span> · Annulation en 1 clic</p>
 
   <div class="hero-proof">
     <div class="proof-avatars">
@@ -447,11 +517,10 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
 <section class="cta-final">
   <h2>Prêt à fidéliser<br>vos clients sans effort ?</h2>
   <p>Rejoignez les professionnels qui communiquent mieux,<br>en moins de temps.</p>
-  <div class="cta-form">
-    <input type="email" id="cta-email" placeholder="votre@cabinet.fr" />
-    <button onclick="handleSignup('cta-email','cta-success')">Commencer gratuitement</button>
+  <div class="cta-form" style="justify-content:center;">
+    <a href="#inscription" onclick="document.getElementById('inscription').scrollIntoView({behavior:'smooth'});return false;" style="display:inline-block;background:var(--or);color:#fff;font-size:14px;font-weight:500;font-family:'DM Sans',sans-serif;padding:14px 28px;border-radius:10px;text-decoration:none;transition:opacity .2s;">Commencer gratuitement →</a>
   </div>
-  <div class="success-msg" id="cta-success" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff;display:none;">✓ Parfait ! Vous recevrez votre accès bêta sous 24h.</div>
+  <div style="height:16px;"></div>
   <p class="cta-note">Sans carte bancaire · 14 jours gratuits · Annulation à tout moment</p>
 </section>
 
@@ -467,31 +536,22 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
 </footer>
 
 <script>
-function handleSignup(inputId, successId) {
-  const input = document.getElementById(inputId);
-  const success = document.getElementById(successId);
-  const email = input.value.trim();
-  if (!email || !email.includes('@')) {
-    input.style.borderColor = '#e74c3c';
-    input.placeholder = 'Email invalide';
-    setTimeout(() => {
-      input.style.borderColor = '';
-      input.placeholder = 'votre@cabinet.fr';
-    }, 2000);
-    return;
-  }
-  input.style.display = 'none';
-  input.closest('.hero-form, .cta-form').querySelector('button').style.display = 'none';
-  success.style.display = 'block';
-}
-
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Veuillez choisir un code pays';
+  window.LOCALE = 'fr';
+  window.EMAIL_INVALID_MESSAGE = "Les informations fournies ne sont pas valides. Veuillez vérifier le format et réessayer.";
+  window.REQUIRED_ERROR_MESSAGE = "Veuillez renseigner votre adresse email.";
+  window.GENERIC_INVALID_MESSAGE = "Les informations fournies ne sont pas valides.";
+  window.translation = { common: { selectedList: '{quantity} liste sélectionnée', selectedLists: '{quantity} listes sélectionnées' } };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdZQqcsAAAAAE3A0tzuec4HJYqzGyndKvo2WxOk&hl=fr" async defer></script>
+<script>
 function toggleFaq(el) {
   const isOpen = el.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
   if (!isOpen) el.classList.add('open');
 }
-
-// Smooth nav shadow on scroll
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   nav.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,.08)' : 'none';
