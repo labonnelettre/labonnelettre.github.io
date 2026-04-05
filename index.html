@@ -278,20 +278,12 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
                 </button>
               </div>
             </div>
-            <div class="sib-optin sib-form-block" style="margin-bottom:8px;">
-              <div class="form__entry entry_mcq">
-                <div class="form__label-row">
-                  <div class="entry__choice">
-                    <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
-                      <input type="checkbox" class="input_replaced" value="1" id="RGPD" name="RGPD" style="margin-top:3px;width:14px;height:14px;flex-shrink:0;accent-color:var(--vert);" />
-                      <span style="font-size:11px;color:var(--txt2);font-family:'DM Sans',sans-serif;line-height:1.5;">J'accepte de recevoir des emails et confirme avoir pris connaissance de la politique de confidentialité. <em style="color:var(--txt3);">Désabonnement possible à tout moment.</em></span>
-                    </label>
-                  </div>
-                </div>
-                <label class="entry__error entry__error--primary" style="font-size:13px;font-family:'DM Sans',sans-serif;color:#661d1d;"></label>
-              </div>
+            <div style="margin-bottom:8px;text-align:left;">
+              <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;">
+                <input type="checkbox" value="1" id="RGPD" name="RGPD" required style="margin-top:3px;min-width:16px;width:16px;height:16px;accent-color:var(--vert);cursor:pointer;flex-shrink:0;" />
+                <span style="font-size:11px;color:var(--txt2);font-family:'DM Sans',sans-serif;line-height:1.6;">J'accepte de recevoir des emails et confirme avoir pris connaissance de la politique de confidentialité. <em style="color:var(--txt3);">Désabonnement possible à tout moment.</em></span>
+              </label>
             </div>
-            <div class="g-recaptcha-v3" data-sitekey="6LdZQqcsAAAAAE3A0tzuec4HJYqzGyndKvo2WxOk" style="display:none;visibility:hidden;width:0;height:0;overflow:hidden;position:absolute;"></div>
             <input type="text" name="email_address_check" value="" class="input--hidden">
             <input type="hidden" name="locale" value="fr">
           </form>
@@ -546,7 +538,6 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
   var AUTOHIDE = Boolean(0);
 </script>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=6LdZQqcsAAAAAE3A0tzuec4HJYqzGyndKvo2WxOk&hl=fr" async defer></script>
 <script>
 function toggleFaq(el) {
   const isOpen = el.classList.contains('open');
