@@ -222,7 +222,6 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">
     <div class="nav-logo-icon">
@@ -238,7 +237,6 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
   <a href="#inscription" class="nav-cta">Accès bêta gratuit</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-bg"></div>
   <div class="hero-pattern"></div>
@@ -326,7 +324,6 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
   </div>
 </section>
 
-<!-- NEWSLETTER PREVIEW -->
 <section class="preview-section">
   <div class="preview-wrap">
     <div class="preview-toolbar">
@@ -378,7 +375,6 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
   </div>
 </section>
 
-<!-- STATS -->
 <div class="stats-bar">
   <div class="stat"><div class="stat-num">60s</div><div class="stat-label">Pour générer une newsletter</div></div>
   <div class="stat"><div class="stat-num">98%</div><div class="stat-label">De marge nette pour vous</div></div>
@@ -386,7 +382,6 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
   <div class="stat"><div class="stat-num">+40%</div><div class="stat-label">Taux d'ouverture moyen</div></div>
 </div>
 
-<!-- HOW IT WORKS -->
 <section class="how" id="comment">
   <div class="section-label">Comment ça marche</div>
   <div class="section-title">Trois étapes.<br>Une newsletter parfaite.</div>
@@ -421,7 +416,6 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
   </div>
 </section>
 
-<!-- TARGETS -->
 <section class="targets">
   <div class="targets-inner">
     <div class="section-label">Fait pour vous</div>
@@ -449,7 +443,6 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
   </div>
 </section>
 
-<!-- PRICING -->
 <section class="pricing" id="tarifs">
   <div class="section-label">Tarifs</div>
   <div class="section-title">Simple et transparent.<br>Sans surprise.</div>
@@ -465,7 +458,7 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
         <li>Statistiques de base</li>
         <li>Support par email</li>
       </ul>
-      <button class="price-btn price-btn-outline" onclick="document.getElementById('hero-email').focus();document.getElementById('top').scrollIntoView();">Essai gratuit 14 jours</button>
+      <button class="price-btn price-btn-outline" onclick="document.getElementById('top').scrollIntoView({behavior: 'smooth'}); setTimeout(() => document.getElementById('EMAIL').focus(), 800);">Essai gratuit 14 jours</button>
     </div>
     <div class="price-card featured">
       <div class="price-badge">⭐ Le plus populaire</div>
@@ -480,7 +473,7 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
         <li>A/B test sur l'objet</li>
         <li>Support prioritaire</li>
       </ul>
-      <button class="price-btn price-btn-solid" onclick="document.getElementById('hero-email').focus();document.getElementById('top').scrollIntoView();">Essai gratuit 14 jours</button>
+      <button class="price-btn price-btn-solid" onclick="document.getElementById('top').scrollIntoView({behavior: 'smooth'}); setTimeout(() => document.getElementById('EMAIL').focus(), 800);">Essai gratuit 14 jours</button>
     </div>
     <div class="price-card">
       <div class="price-name">Cabinet & Agence</div>
@@ -494,12 +487,11 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
         <li>Accès API</li>
         <li>Gestionnaire de compte dédié</li>
       </ul>
-      <button class="price-btn price-btn-outline" onclick="document.getElementById('hero-email').focus();document.getElementById('top').scrollIntoView();">Nous contacter</button>
+      <button class="price-btn price-btn-outline" onclick="document.getElementById('top').scrollIntoView({behavior: 'smooth'}); setTimeout(() => document.getElementById('EMAIL').focus(), 800);">Nous contacter</button>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq" id="faq">
   <div class="faq-inner">
     <div class="section-label" style="text-align:center;">Questions fréquentes</div>
@@ -528,7 +520,6 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
   </div>
 </section>
 
-<!-- CTA FINAL -->
 <section class="cta-final">
   <h2>Prêt à fidéliser<br>vos clients sans effort ?</h2>
   <p>Rejoignez les professionnels qui communiquent mieux,<br>en moins de temps.</p>
@@ -539,13 +530,12 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
   <p class="cta-note">Sans carte bancaire · 14 jours gratuits · Annulation à tout moment</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">La Bonne <span>Lettre</span></div>
   <div class="footer-links">
     <a href="#">Mentions légales</a>
     <a href="#">Confidentialité</a>
-    <a href="#">Contact</a>
+    <a href="mailto:contact@labonnelettre.com">Contact</a>
   </div>
   <div class="footer-copy">© 2026 La Bonne Lettre</div>
 </footer>
