@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vérifiez votre boîte mail — La Bonne Lettre</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:#FAF8F3;color:#1A1A18;min-height:100vh;display:flex;flex-direction:column;}
+nav{padding:0 40px;height:64px;display:flex;align-items:center;border-bottom:1px solid #E8E4DA;background:#FAF8F3;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-icon{width:32px;height:32px;background:#2D5A3D;border-radius:8px;display:flex;align-items:center;justify-content:center;}
+.nav-logo-icon svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2;}
+.nav-logo-text{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#2D5A3D;}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 24px;}
+.card{background:#fff;border:1px solid #E8E4DA;border-radius:20px;padding:56px 48px;max-width:520px;width:100%;text-align:center;}
+.icon-wrap{width:72px;height:72px;background:#EBF4EE;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;}
+.icon-wrap svg{width:32px;height:32px;stroke:#2D5A3D;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+h1{font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:#1A1A18;margin-bottom:12px;line-height:1.2;}
+.subtitle{font-size:15px;color:#5A5A52;font-weight:300;line-height:1.7;margin-bottom:32px;}
+.highlight{color:#2D5A3D;font-weight:500;}
+.steps{background:#F5FAF6;border-radius:12px;padding:20px 24px;margin-bottom:32px;text-align:left;}
+.step{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+.step:last-child{margin-bottom:0;}
+.step-num{width:24px;height:24px;background:#2D5A3D;color:#fff;border-radius:50%;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.step-text{font-size:13px;color:#5A5A52;line-height:1.5;}
+.step-text strong{color:#1A1A18;}
+.back-link{font-size:13px;color:#9A9A90;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s;}
+.back-link:hover{color:#2D5A3D;}
+.badge{display:inline-flex;align-items:center;gap:6px;background:#EBF4EE;border:1px solid rgba(45,90,61,.15);border-radius:20px;padding:5px 12px;font-size:12px;font-weight:500;color:#2D5A3D;margin-bottom:24px;}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:#2D5A3D;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+footer{text-align:center;padding:24px;font-size:12px;color:#9A9A90;border-top:1px solid #E8E4DA;}
+@media(max-width:540px){.card{padding:36px 24px;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </div>
+    <span class="nav-logo-text">La Bonne Lettre</span>
+  </a>
+</nav>
+
+<main>
+  <div class="card">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Inscription en cours de validation
+    </div>
+
+    <div class="icon-wrap">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </div>
+
+    <h1>Vérifiez votre<br>boîte mail</h1>
+    <p class="subtitle">
+      Un email de confirmation vient de vous être envoyé.<br>
+      <span class="highlight">Cliquez sur le lien qu'il contient</span> pour valider votre inscription et réserver votre accès bêta.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Ouvrez votre boîte mail</strong> — vérifiez également vos spams si vous ne voyez pas l'email.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Cliquez sur "Confirmer mon inscription"</strong> dans l'email envoyé par La Bonne Lettre.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Votre place est réservée</strong> — vous serez prévenu(e) en priorité dès l'ouverture de la bêta.</div>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Retour à l'accueil
+    </a>
+  </div>
+</main>
+
+<footer>© 2026 La Bonne Lettre · <a href="confidentialite.html" style="color:#9A9A90;">Confidentialité</a></footer>
+
+</body>
+</html>
