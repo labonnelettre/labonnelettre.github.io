@@ -19,10 +19,14 @@ main{max-width:720px;margin:0 auto;padding:100px 24px 80px;}
 h1{font-family:'Playfair Display',serif;font-size:36px;font-weight:800;color:#1A1A18;margin-bottom:8px;}
 .subtitle{font-size:14px;color:#9A9A90;margin-bottom:48px;}
 h2{font-size:16px;font-weight:600;color:#1A1A18;margin:32px 0 12px;}
+h3{font-size:14px;font-weight:600;color:#1A1A18;margin:20px 0 8px;}
 p{font-size:14px;color:#5A5A52;margin-bottom:12px;}
 ul{font-size:14px;color:#5A5A52;margin:0 0 12px 20px;}
 ul li{margin-bottom:6px;}
 a{color:#2D5A3D;}
+.gouvernance-bloc{background:#F0EDE6;border-left:3px solid #2D5A3D;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0;}
+.gouvernance-bloc h3{margin-top:0;color:#2D5A3D;}
+.gouvernance-bloc p, .gouvernance-bloc ul{color:#4A4A42;}
 footer{text-align:center;padding:32px;font-size:12px;color:#9A9A90;border-top:1px solid #E8E4DA;margin-top:40px;}
 footer a{color:#2D5A3D;text-decoration:none;margin:0 12px;}
 </style>
@@ -36,53 +40,104 @@ footer a{color:#2D5A3D;text-decoration:none;margin:0 12px;}
 </nav>
 <main>
   <h1>Politique de confidentialité</h1>
-  <p class="subtitle">Dernière mise à jour : avril 2026</p>
+  <p class="subtitle">Dernière mise à jour : avril 2026 — Conforme au Règlement UE 2016/679 (RGPD)</p>
 
   <h2>Responsable du traitement</h2>
-  <p>La Bonne Lettre est responsable du traitement de vos données personnelles collectées via le site <strong>labonnelettre.com</strong>. Contact : <a href="mailto:contact@labonnelettre.com">contact@labonnelettre.com</a></p>
+  <p>
+    <strong>Anaïs FILA</strong>, Entreprise Individuelle<br>
+    Nom commercial : <strong>La Bonne Lettre</strong><br>
+    Site : <a href="https://labonnelettre.com">labonnelettre.com</a><br>
+    Contact DPO : <a href="mailto:contact@labonnelettre.com">contact@labonnelettre.com</a>
+  </p>
+  <p>En tant que responsable du traitement au sens de l'article 4 du RGPD, Anaïs FILA s'engage à traiter vos données personnelles dans le strict respect de la réglementation applicable et des principes de minimisation, de finalité et de sécurité.</p>
 
   <h2>Données collectées</h2>
-  <p>Nous collectons uniquement votre <strong>adresse email</strong> lorsque vous remplissez le formulaire d'inscription sur notre site. Aucune autre donnée personnelle n'est collectée (pas de nom, numéro de téléphone, adresse postale).</p>
+  <p>Dans le cadre de la phase bêta et de l'utilisation du service La Bonne Lettre, nous collectons les données suivantes :</p>
+  <ul>
+    <li><strong>Adresse email</strong> : collectée via le formulaire d'inscription sur labonnelettre.com</li>
+    <li><strong>Données de connexion</strong> (lors de l'accès à l'application) : adresse email, date et heure de connexion, adresse IP</li>
+    <li><strong>Données d'usage</strong> : historique des newsletters générées, secteur d'activité renseigné, statistiques d'envoi</li>
+    <li><strong>Bases de contacts clients</strong> importées par l'utilisateur dans l'application (noms et emails de ses propres clients)</li>
+  </ul>
+  <p>Aucune donnée sensible au sens de l'article 9 du RGPD (santé, origine ethnique, opinions politiques, etc.) n'est collectée ni traitée.</p>
 
   <h2>Finalité du traitement</h2>
-  <p>Votre adresse email est utilisée exclusivement pour :</p>
+  <p>Vos données sont utilisées exclusivement pour :</p>
   <ul>
-    <li>Vous envoyer des informations sur le lancement de La Bonne Lettre</li>
-    <li>Vous proposer un accès à notre bêta gratuite</li>
-    <li>Vous communiquer nos offres commerciales</li>
+    <li>Vous envoyer des informations sur le lancement et les évolutions de La Bonne Lettre</li>
+    <li>Vous proposer et gérer votre accès à la bêta et à l'application</li>
+    <li>Assurer la fourniture du service SaaS (génération et envoi de newsletters)</li>
+    <li>Vous adresser des communications commerciales relatives au service</li>
+    <li>Améliorer la qualité du service (analyses d'usage anonymisées)</li>
   </ul>
 
   <h2>Base légale</h2>
-  <p>Le traitement est basé sur votre <strong>consentement explicite</strong> donné lors de l'inscription (case à cocher RGPD). Vous pouvez retirer ce consentement à tout moment.</p>
+  <p>Les traitements reposent sur les bases légales suivantes :</p>
+  <ul>
+    <li><strong>Consentement explicite</strong> (article 6.1.a RGPD) : pour les communications marketing et l'inscription bêta, matérialisé par la case à cocher lors du formulaire d'inscription</li>
+    <li><strong>Exécution d'un contrat</strong> (article 6.1.b RGPD) : pour la fourniture du service SaaS aux abonnés</li>
+    <li><strong>Intérêt légitime</strong> (article 6.1.f RGPD) : pour les analyses d'usage visant à améliorer le service</li>
+  </ul>
 
   <h2>Durée de conservation</h2>
-  <p>Vos données sont conservées jusqu'à votre désinscription ou sur demande de suppression, et au maximum 3 ans après le dernier contact.</p>
+  <ul>
+    <li><strong>Données de prospection et bêta</strong> (email seul) : conservées 3 ans à compter du dernier contact, conformément aux recommandations de la CNIL</li>
+    <li><strong>Données de compte abonné</strong> : conservées pendant toute la durée de l'abonnement actif, puis supprimées dans les 30 jours suivant la résiliation ou la demande de clôture</li>
+    <li><strong>Bases de contacts clients importées</strong> : voir section Gouvernance des données ci-dessous</li>
+    <li><strong>Données de facturation</strong> : conservées 10 ans conformément aux obligations légales comptables françaises</li>
+  </ul>
 
-  <h2>Partage des données</h2>
-  <p>Vos données sont transmises à <strong>Brevo</strong> (anciennement Sendinblue), notre plateforme d'emailing, conformément à leur <a href="https://www.brevo.com/fr/legal/privacypolicy/" target="_blank">politique de confidentialité</a>. Elles ne sont jamais vendues ni partagées avec d'autres tiers.</p>
+  <h2>Gouvernance des données</h2>
+  <div class="gouvernance-bloc">
+    <h3>Politique d'hygiène des données clients</h3>
+    <p>La Bonne Lettre traite des bases de contacts importées par ses utilisateurs professionnels (experts-comptables, avocats, notaires, consultants). Ces données appartiennent exclusivement à l'utilisateur. En qualité de sous-traitant au sens de l'article 28 du RGPD pour ces données, La Bonne Lettre s'engage à :</p>
+    <ul>
+      <li><strong>Suppression sécurisée post-abonnement</strong> : toutes les bases de contacts clients importées par un utilisateur sont définitivement supprimées de nos serveurs dans un délai maximum de <strong>6 mois</strong> suivant la fin de son abonnement (résiliation, non-renouvellement ou clôture de compte), sans conservation résiduelle</li>
+      <li><strong>Cloisonnement des données</strong> : les bases de contacts d'un utilisateur ne sont jamais accessibles par un autre utilisateur, ni utilisées à des fins autres que la fourniture du service à cet utilisateur</li>
+      <li><strong>Non-utilisation pour l'entraînement IA</strong> : les données clients importées ne sont en aucun cas utilisées pour entraîner, affiner ou améliorer les modèles d'intelligence artificielle utilisés par La Bonne Lettre. Les appels à l'API d'intelligence artificielle sont effectués via des terminaux professionnels garantissant la non-rétention des données (Zero Data Retention)</li>
+      <li><strong>Suppression sur demande</strong> : l'utilisateur peut demander la suppression immédiate de ses bases de contacts à tout moment via les paramètres de son compte ou par email à <a href="mailto:contact@labonnelettre.com">contact@labonnelettre.com</a></li>
+    </ul>
+    <p>Cette politique s'applique indépendamment de la durée de conservation des données de compte de l'utilisateur lui-même.</p>
+  </div>
+
+  <h2>Sous-traitants et transferts de données</h2>
+  <p>Vos données peuvent être transmises aux sous-traitants suivants, dans le cadre strict de la fourniture du service :</p>
+  <ul>
+    <li><strong>Brevo</strong> (anciennement Sendinblue, France) : plateforme d'emailing — <a href="https://www.brevo.com/fr/legal/privacypolicy/" target="_blank">politique de confidentialité</a></li>
+    <li><strong>Stripe</strong> (États-Unis) : traitement des paiements — données de facturation uniquement — <a href="https://stripe.com/fr/privacy" target="_blank">politique de confidentialité</a></li>
+    <li><strong>Anthropic</strong> (États-Unis) : fourniture de l'API d'intelligence artificielle — les appels sont effectués en mode Zero Data Retention, sans conservation ni utilisation des données par Anthropic</li>
+    <li><strong>GitHub Pages</strong> (États-Unis) : hébergement du site vitrine</li>
+  </ul>
+  <p>Tous les sous-traitants ont été sélectionnés pour leur conformité au RGPD et font l'objet de garanties appropriées (clauses contractuelles types ou décisions d'adéquation de la Commission européenne).</p>
+  <p>Vos données ne sont jamais vendues, louées ou cédées à des tiers à des fins commerciales.</p>
 
   <h2>Vos droits</h2>
-  <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+  <p>Conformément au RGPD (articles 15 à 22), vous disposez des droits suivants sur vos données personnelles :</p>
   <ul>
-    <li><strong>Droit d'accès</strong> : connaître les données que nous détenons sur vous</li>
-    <li><strong>Droit de rectification</strong> : corriger des données inexactes</li>
-    <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données</li>
-    <li><strong>Droit d'opposition</strong> : vous opposer au traitement</li>
-    <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format lisible</li>
+    <li><strong>Droit d'accès</strong> (art. 15) : obtenir une copie des données que nous détenons sur vous</li>
+    <li><strong>Droit de rectification</strong> (art. 16) : corriger des données inexactes ou incomplètes</li>
+    <li><strong>Droit à l'effacement</strong> (art. 17) : demander la suppression de vos données ("droit à l'oubli")</li>
+    <li><strong>Droit à la limitation</strong> (art. 18) : restreindre temporairement le traitement de vos données</li>
+    <li><strong>Droit d'opposition</strong> (art. 21) : vous opposer au traitement fondé sur l'intérêt légitime</li>
+    <li><strong>Droit à la portabilité</strong> (art. 20) : recevoir vos données dans un format structuré et lisible</li>
+    <li><strong>Droit de retrait du consentement</strong> (art. 7.3) : retirer votre consentement à tout moment, sans effet rétroactif</li>
   </ul>
-  <p>Pour exercer ces droits, contactez-nous à <a href="mailto:contact@labonnelettre.com">contact@labonnelettre.com</a>. Nous répondrons dans un délai maximum de 30 jours.</p>
+  <p>Pour exercer l'un de ces droits, adressez votre demande à <a href="mailto:contact@labonnelettre.com">contact@labonnelettre.com</a>. Nous nous engageons à vous répondre dans un délai maximum de <strong>30 jours</strong> à compter de la réception de votre demande.</p>
 
   <h2>Désinscription</h2>
-  <p>Vous pouvez vous désinscrire à tout moment en cliquant sur le lien de désinscription présent dans chacun de nos emails, ou en nous contactant directement.</p>
+  <p>Vous pouvez vous désinscrire de nos communications à tout moment en cliquant sur le lien de désinscription présent dans chacun de nos emails, ou en nous contactant directement à <a href="mailto:contact@labonnelettre.com">contact@labonnelettre.com</a>. La désinscription est effective immédiatement.</p>
 
-  <h2>Réclamation</h2>
-  <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) : <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a></p>
+  <h2>Sécurité des données</h2>
+  <p>La Bonne Lettre met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, destruction ou divulgation. Le site est servi exclusivement en HTTPS. Les accès aux données sont strictement limités aux personnes habilitées.</p>
+
+  <h2>Réclamation auprès de la CNIL</h2>
+  <p>Si vous estimez que vos droits ne sont pas respectés, vous disposez du droit d'introduire une réclamation auprès de l'autorité de contrôle compétente : la <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong>, 3 Place de Fontenoy, 75007 Paris — <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a></p>
 </main>
 <footer>
   <a href="index.html">Accueil</a>
   <a href="mentions-legales.html">Mentions légales</a>
   <a href="mailto:contact@labonnelettre.com">Contact</a>
-  <p style="margin-top:12px;">© 2026 La Bonne Lettre</p>
+  <p style="margin-top:12px;">© 2026 La Bonne Lettre — Anaïs FILA, Entreprise Individuelle</p>
 </footer>
 </body>
 </html>
