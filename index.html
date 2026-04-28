@@ -223,18 +223,29 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
 <body>
 
 <!-- NAV -->
-<nav>
-  <div class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+<nav style="display: flex; align-items: center; justify-content: space-between; padding: 20px 5%; background: transparent; position: relative; z-index: 1000;">
+    
+    <div class="nav-logo" style="display: flex; align-items: center; flex: 1;">
+        <div class="nav-logo-icon" style="margin-right: 10px;">
+             <svg viewBox="0 0 24 24" width="24" height="24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <span class="nav-logo-text" style="font-family: 'Playfair Display', serif; font-weight: 700;">La Bonne Lettre</span>
     </div>
-    <span class="nav-logo-text">La Bonne Lettre</span>
-  </div>
-  <div class="nav-links" style="position: absolute; left: 50%; transform: translateX(-50%); display: flex; gap: 30px;">
-    <a href="#comment">La Méthode</a>
-    <a href="#tarifs">Offres</a>
-    <a href="#faq">Questions</a>
-  </div>
+
+    <div class="nav-links" style="display: flex; gap: 30px; justify-content: center; flex: 2;">
+        <a href="#comment" style="text-decoration: none; color: inherit; font-size: 14px;">La Méthode</a>
+        <a href="#tarifs" style="text-decoration: none; color: inherit; font-size: 14px;">Offres</a>
+        <a href="#faq" style="text-decoration: none; color: inherit; font-size: 14px;">Questions</a>
+    </div>
+
+    <div style="flex: 1;"></div>
+
+    <style>
+        @media (max-width: 768px) {
+            .nav-links { display: none !important; } /* On cache les liens sur mobile pour éviter le chevauchement */
+            .nav-logo { justify-content: center; } /* On centre le logo sur mobile */
+        }
+    </style>
 </nav>
 
 <!-- HERO -->
