@@ -278,49 +278,30 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
           <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
             <span class="sib-form-message-panel__inner-text">Nous n'avons pas pu confirmer votre inscription.</span>
           </div>
-        </div>
-        <div></div>
-        <div id="success-message" class="sib-form-message-panel" style="font-size:14px;text-align:left;font-family:'DM Sans',sans-serif;color:#085229;background-color:#e7faf0;border-radius:10px;border-color:#13ce66;max-width:520px;">
-          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-            <span class="sib-form-message-panel__inner-text">✓ Merci ! Vérifiez votre boîte mail pour confirmer votre inscription.</span>
+       <div style="padding: 8px 0; margin-top: 15px;">
+          <div class="sib-optin sib-form-block">
+            <div class="form__entry entry_mcq">
+              <div class="form__label-row">
+                <div class="entry__choice">
+                  <label>
+                    <input type="checkbox" class="input_replaced" value="1" id="RGPD" name="RGPD" required />
+                    <span class="checkbox checkbox_tick_positive"></span>
+                    <span style="font-size:12px; text-align:left; font-family:'DM Sans',sans-serif; color:#1A1A18;">J'accepte de recevoir vos e-mails et confirme avoir pris connaissance de votre politique de confidentialité.</span>
+                  </label>
+                </div>
+              </div>
+              <label class="entry__error entry__error--primary" style="font-size:13px; text-align:left; font-family:'DM Sans',sans-serif; color:#661d1d; background-color:#ffeded; padding:10px; display:none; margin-top:10px; border-radius:4px;">
+                Veuillez cocher la case de confidentialité pour valider votre inscription.
+              </label>
+            </div>
           </div>
         </div>
-        <div></div>
-        <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center;background-color:transparent;max-width:520px;border-width:0px;direction:ltr">
-          <form id="sib-form" method="POST" action="https://c2330ae1.sibforms.com/serve/MUIFAEXjbO9ZV54MWWykhYkgxHVzs7UP3_olNVfpuRpZ6tp7otO_z_7LFh16QfFfYOeAVkHrS0jDn0mvchAY45FXiNZdZ07WCFz4YYOy-4NzxRgNogwHVOml4B8A18uxYhxCxe5u26YJOm-Zi09nsEJiq0739DHXoTZl9IJH2S_T-0STXJx7w3wrw7U2DNDGv1m-VeTWvJOwkmdsQg==" data-type="subscription">
-            <div style="padding:4px 0;">
-              <div class="sib-input sib-form-block">
-                <div class="form__entry entry_block">
-                  <div class="form__label-row">
-                    <div class="entry__field">
-                      <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="votre@cabinet.fr" data-required="true" required />
-                    </div>
-                  </div>
-                  <label class="entry__error entry__error--primary" style="font-size:13px;text-align:left;font-family:'DM Sans',sans-serif;color:#661d1d;background-color:#ffeded;border-radius:3px;border-color:#ff4949;"></label>
-                </div>
-              </div>
-            </div>
-            <div style="padding: 4px 0; margin-top: 20px;">
-              <div class="sib-optin sib-form-block">
-                <div class="form__entry entry_mcq">
-                  <div class="form__label-row">
-                    <div class="entry__choice">
-                      <div style="padding: 20px 0; text-align: center;">
-    <button type="submit" class="sib-form-block__button" style="background: #1A1A18 !important; color: #FFFFFF !important; border: none !important; padding: 20px 40px !important; border-radius: 0px !important; font-size: 11px !important; font-weight: 500 !important; letter-spacing: 3px !important; text-transform: uppercase !important; cursor: pointer !important; transition: background-color 0.3s ease !important;">
-        Rejoindre la bêta privée
-    </button>
-</div>
-                    </div>
-                  </div>
-                  <label class="entry__error entry__error--primary" style="font-size:13px;text-align:left;font-family:'DM Sans',sans-serif;color:#661d1d;background-color:#ffeded;border-radius:3px;border-color:#ff4949;"></label>
-                </div>
-              </div>
-            </div>
-            <div style="padding: 20px 0; text-align: center;">
-    <button type="submit" class="sib-form-block__button" style="background: #1A1A18; color: #FFFFFF; border: none; padding: 20px 40px; border-radius: 4px; font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; cursor: pointer;">
-        Rejoindre la bêta privée
-    </button>
-</div>
+
+        <div style="padding: 20px 0; text-align: center;">
+          <button type="submit" class="sib-form-block__button" style="background: #1A1A18 !important; color: #FFFFFF !important; border: none !important; padding: 20px 40px !important; border-radius: 0px !important; font-size: 11px !important; font-weight: 500 !important; letter-spacing: 3px !important; text-transform: uppercase !important; cursor: pointer !important;">
+            REJOINDRE LA BÊTA PRIVÉE
+          </button>
+        </div>
             </div>
             <input type="text" name="email_address_check" value="" class="input--hidden">
             <input type="hidden" name="locale" value="fr">
