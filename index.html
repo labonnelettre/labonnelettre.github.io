@@ -366,35 +366,80 @@ footer{background:#111;padding:32px 40px;display:flex;justify-content:space-betw
 </section>
 
 <!-- STATS -->
-<section style="background-color: #2D5A3D; padding: 50px 20px; border-radius: 0px; margin: 20px 0;">
-    <div style="display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; max-width: 1200px; margin: 0 auto; color: #FFFFFF !important;">
+<section style="background-color: #2D5A3D; padding: 60px 20px; border-radius: 0px; margin: 40px 0;">
+    <style>
+        .stats-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        .stat-column {
+            flex: 1;
+            min-width: 220px; /* Légèrement augmenté pour accommoder les textes plus grands */
+            text-align: center;
+            padding: 15px;
+            color: #FFFFFF !important;
+        }
+        .stat-divider {
+            width: 1px;
+            height: 60px;
+            background: rgba(255,255,255,0.3);
+        }
+        /* Style des chiffres */
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px; /* Augmenté de 36px à 42px */
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        /* Style des textes sous les chiffres */
+        .stat-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px; /* Augmenté de 15px à 16px */
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
         
-        <div style="text-align: center; flex: 1; padding: 10px;">
-            <div style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; margin-bottom: 8px; color: #FFFFFF !important;">60s</div>
-            <div style="font-family: 'DM Sans', sans-serif; font-size: 14px; opacity: 0.9; color: #FFFFFF !important;">pour rédiger une newsletter</div>
+        @media (max-width: 850px) {
+            .stat-divider { display: none; }
+            .stat-column { min-width: 100%; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 25px 15px; }
+            .stat-column:last-child { border-bottom: none; }
+            .stat-number { font-size: 38px; } /* Légère réduction sur mobile pour éviter les débordements */
+        }
+    </style>
+
+    <div class="stats-wrapper">
+        <div class="stat-column">
+            <div class="stat-number">60s</div>
+            <div class="stat-text">pour rédiger une newsletter</div>
         </div>
 
-        <div style="width: 1px; height: 50px; background: rgba(255,255,255,0.3); margin: 0 10px;"></div>
+        <div class="stat-divider"></div>
 
-        <div style="text-align: center; flex: 1.5; padding: 10px;">
-            <div style="font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 8px; color: #FFFFFF !important; white-space: nowrap;">Une demi-journée</div>
-            <div style="font-family: 'DM Sans', sans-serif; font-size: 14px; opacity: 0.9; color: #FFFFFF !important;">de temps libéré chaque mois</div>
+        <div class="stat-column">
+            <div class="stat-number" style="font-size: 30px;">Une demi-journée</div>
+            <div class="stat-text">de temps libéré chaque mois</div>
         </div>
 
-        <div style="width: 1px; height: 50px; background: rgba(255,255,255,0.3); margin: 0 10px;"></div>
+        <div class="stat-divider"></div>
 
-        <div style="text-align: center; flex: 1; padding: 10px;">
-            <div style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; margin-bottom: 8px; color: #FFFFFF !important;">0</div>
-            <div style="font-family: 'DM Sans', sans-serif; font-size: 14px; opacity: 0.9; color: #FFFFFF !important;">compétence technique requise</div>
+        <div class="stat-column">
+            <div class="stat-number">0</div>
+            <div class="stat-text">compétence technique requise</div>
         </div>
 
-        <div style="width: 1px; height: 50px; background: rgba(255,255,255,0.3); margin: 0 10px;"></div>
+        <div class="stat-divider"></div>
 
-        <div style="text-align: center; flex: 1; padding: 10px;">
-            <div style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; margin-bottom: 8px; color: #FFFFFF !important;">+40%</div>
-            <div style="font-family: 'DM Sans', sans-serif; font-size: 14px; opacity: 0.9; color: #FFFFFF !important;">de taux d'ouverture moyen</div>
+        <div class="stat-column">
+            <div class="stat-number">+40%</div>
+            <div class="stat-text">de taux d'ouverture moyen</div>
         </div>
-
     </div>
 </section>
 </div>
