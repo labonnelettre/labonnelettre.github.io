@@ -175,7 +175,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:64px;d
 /* ── FAQ ── */
 .faq{background:var(--vert-xs);padding:80px 24px;border-top:1px solid var(--bord);}
 .faq-inner{max-width:680px;margin:0 auto;}
-.faq-item{background:#fff;border-bottom:1px solid var(--bord);border-radius:0px;padding:20px 0px;margin-bottom:0px;cursor:pointer;}
+.faq-item {
+    background: #ffffff;
+    border: 1px solid var(--bord);
+    border-radius: 4px; /* Le secret est ici : presque carré, mais fini */
+    padding: 24px;      /* On redonne de l'air à l'intérieur */
+    margin-bottom: 16px; /* On sépare les boîtes pour que ça respire */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02); /* Une ombre presque invisible pour le chic */
+}
 .faq-q{font-size:16px;font-weight:500;color:var(--txt);display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 0px;}
 .faq-q::after{content:'+';font-size:20px;color:var(--vert);flex-shrink:0;transition:transform .2s;}
 .faq-item.open .faq-q::after{transform:rotate(45deg);}
