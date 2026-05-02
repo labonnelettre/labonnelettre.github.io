@@ -58,6 +58,14 @@
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--creme);color:var(--txt);line-height:1.6;overflow-x:hidden;}
 
+/* Curseur texte clignotant supprimé sur éléments non éditables */
+body *:not(input):not(textarea):not(select){
+  user-select:none;
+  -webkit-user-select:none;
+}
+a,button,.price-btn,.faq-item,.gen-btn,.cta-btn,.nav-links a{cursor:pointer!important;}
+input,textarea,select{user-select:text!important;-webkit-user-select:text!important;cursor:text!important;}
+
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,243,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--bord);transition:all .3s;}
 .nav-logo{display:flex;align-items:center;gap:10px;flex:1;white-space:nowrap;}
