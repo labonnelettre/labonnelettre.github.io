@@ -28,7 +28,7 @@
 #sib-form input[type="text"].input{width:100%!important;padding:14px 18px!important;border:1px solid var(--bord)!important;border-radius:4px!important;font-size:14px!important;font-family:'DM Sans',sans-serif!important;background:#fff!important;color:var(--txt)!important;outline:none!important;box-sizing:border-box!important;transition:border .2s!important;}
 #sib-form input[type="text"].input:focus{border-color:var(--vert)!important;}
 #sib-form input[type="text"].input::placeholder{color:var(--txt3)!important;}
-#sib-form .sib-form-block__button{background:#1A1A18!important;border-radius:50px!important;font-family:'DM Sans',sans-serif!important;font-size:11px!important;font-weight:500!important;letter-spacing:3px!important;text-transform:uppercase!important;padding:18px 40px!important;width:100%!important;transition:background .2s!important;white-space:nowrap!important;border:none!important;box-shadow:none!important;outline:none!important;color:#fff!important;}
+#sib-form .sib-form-block__button{background:#1A1A18!important;border-radius:4px!important;font-family:'DM Sans',sans-serif!important;font-size:11px!important;font-weight:500!important;letter-spacing:3px!important;text-transform:uppercase!important;padding:18px 40px!important;width:100%!important;transition:background .2s!important;white-space:nowrap!important;border:none!important;box-shadow:none!important;outline:none!important;color:#fff!important;}
 #sib-form .sib-form-block__button:hover{background:var(--vert)!important;}
 .sib-form-block__button-with-loader::after{display:none!important;}
 .input_replaced{display:inline-block!important;opacity:1!important;visibility:visible!important;width:14px!important;height:14px!important;position:relative!important;accent-color:var(--vert)!important;cursor:pointer!important;flex-shrink:0!important;}
@@ -270,8 +270,8 @@ footer{background:#111;padding:36px 5%;display:flex;justify-content:space-betwee
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#2D5A3D" stroke-width="1.5">
+    <div class="nav-logo-icon" style="width:32px;height:32px;background:#2D5A3D;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2">
         <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
         <polyline points="22,6 12,13 2,6"/>
       </svg>
@@ -516,7 +516,7 @@ footer{background:#111;padding:36px 5%;display:flex;justify-content:space-betwee
 <section class="pricing" id="tarifs">
   <div class="pricing-header">
     <span class="ph1">Une tarification claire.</span>
-    <span class="ph2">Aucune clause cachée.</span>
+    <span class="ph1" style="font-size:34px;">Aucune clause cachée.</span>
   </div>
   <div class="pricing-grid">
     <div class="price-card">
