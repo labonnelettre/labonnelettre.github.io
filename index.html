@@ -430,35 +430,6 @@ window.addEventListener('scroll',()=>{
   nav.style.boxShadow=window.scrollY>20?'0 2px 20px rgba(0,0,0,.06)':'none';
 });
 
-// GARDE DU CORPS RGPD — version finale compatible Brevo
-document.addEventListener('DOMContentLoaded', function() {
-  var form = document.getElementById('sib-form');
-  if (!form) return;
-
-  var rgpdError = document.createElement('p');
-  rgpdError.style.cssText = 'display:none;font-size:12px;color:#661d1d;background:#ffeded;border-radius:4px;padding:8px 12px;margin-top:8px;text-align:left;font-family:"DM Sans",sans-serif;';
-  rgpdError.textContent = '⚠ Veuillez cocher la case de confidentialité pour valider votre inscription.';
-  var rgpdBlock = document.querySelector('.sib-optin');
-  if (rgpdBlock) rgpdBlock.appendChild(rgpdError);
-
-  form.addEventListener('submit', function(e) {
-    var rgpd = document.getElementById('RGPD')
-              || document.querySelector('input[name="RGPD"]')
-              || document.querySelector('.input_replaced');
-    var isChecked = rgpd && (rgpd.checked === true || rgpd.getAttribute('checked') !== null);
-    if (!isChecked) {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      rgpdError.style.display = 'block';
-      if (rgpd) {
-        rgpd.style.outline = '2px solid #ff4949';
-        setTimeout(function() { rgpd.style.outline = ''; }, 3000);
-      }
-      return false;
-    }
-    rgpdError.style.display = 'none';
-  }, true);
-});
 </script>
 </body>
 </html>
