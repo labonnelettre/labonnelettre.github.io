@@ -430,7 +430,7 @@ window.addEventListener('scroll',()=>{
   nav.style.boxShadow=window.scrollY>20?'0 2px 20px rgba(0,0,0,.06)':'none';
 });
 
-// GARDE DU CORPS RGPD — interception au niveau du formulaire
+// GARDE DU CORPS RGPD — version finale compatible Brevo
 document.addEventListener('DOMContentLoaded', function() {
   var form = document.getElementById('sib-form');
   if (!form) return;
@@ -442,10 +442,13 @@ document.addEventListener('DOMContentLoaded', function() {
   if (rgpdBlock) rgpdBlock.appendChild(rgpdError);
 
   form.addEventListener('submit', function(e) {
-    var rgpd = document.getElementById('RGPD');
-    if (!rgpd || !rgpd.checked) {
+    var rgpd = document.getElementById('RGPD')
+              || document.querySelector('input[name="RGPD"]')
+              || document.querySelector('.input_replaced');
+    var isChecked = rgpd && (rgpd.checked === true || rgpd.getAttribute('checked') !== null);
+    if (!isChecked) {
       e.preventDefault();
-      e.stopPropagation();
+      e.stopImmediatePropagation();
       rgpdError.style.display = 'block';
       if (rgpd) {
         rgpd.style.outline = '2px solid #ff4949';
@@ -454,7 +457,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return false;
     }
     rgpdError.style.display = 'none';
-  });
+  }, true);
 });
 </script>
 </body>
