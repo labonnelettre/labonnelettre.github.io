@@ -28,7 +28,7 @@
 #sib-form input[type="text"].input{width:100%!important;padding:14px 18px!important;border:1px solid var(--bord)!important;border-radius:4px!important;font-size:14px!important;font-family:'DM Sans',sans-serif!important;background:#fff!important;color:var(--txt)!important;outline:none!important;box-sizing:border-box!important;transition:border .2s!important;}
 #sib-form input[type="text"].input:focus{border-color:var(--vert)!important;}
 #sib-form input[type="text"].input::placeholder{color:var(--txt3)!important;}
-#sib-form .sib-form-block__button{background:#1A1A18!important;border-radius:4px!important;font-family:'DM Sans',sans-serif!important;font-size:11px!important;font-weight:500!important;letter-spacing:3px!important;text-transform:uppercase!important;padding:18px 40px!important;width:100%!important;transition:background .2s!important;white-space:nowrap!important;border:none!important;box-shadow:none!important;outline:none!important;color:#fff!important;}
+.sib-form-block__button{background:#1A1A18!important;border-radius:4px!important;font-family:'DM Sans',sans-serif!important;font-size:11px!important;font-weight:500!important;letter-spacing:3px!important;text-transform:uppercase!important;padding:18px 40px!important;width:100%!important;transition:background .2s!important;white-space:nowrap!important;border:none!important;box-shadow:none!important;outline:none!important;color:#fff!important;}
 #sib-form .sib-form-block__button:hover{background:var(--vert)!important;}
 .sib-form-block__button-with-loader::after{display:none!important;}
 .input_replaced{display:inline-block!important;opacity:1!important;visibility:visible!important;width:14px!important;height:14px!important;position:relative!important;accent-color:var(--vert)!important;cursor:pointer!important;flex-shrink:0!important;}
@@ -189,52 +189,61 @@ footer{background:#111;padding:36px 5%;display:flex;justify-content:space-betwee
   <h1>Votre newsletter professionnelle,<br><em>rédigée en 60 secondes</em></h1>
   <p class="hero-sub">Renseignez vos actualités, déléguez la rédaction, et validez.</p>
   <div id="inscription">
+    <!-- Formulaire Brevo original — stylisé via CSS overrides -->
     <div class="sib-form" style="text-align:center;background:transparent;">
       <div id="sib-form-container" class="sib-form-container">
-        <div id="error-message" class="sib-form-message-panel" style="font-size:13px;text-align:left;font-family:'DM Sans',sans-serif;color:#661d1d;background:#ffeded;border-radius:4px;border-color:#ff4949;max-width:480px;margin-bottom:10px;">
+        <div id="error-message" class="sib-form-message-panel" style="font-size:13px;text-align:left;font-family:'DM Sans',sans-serif;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:4px;max-width:480px;">
           <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
             <span class="sib-form-message-panel__inner-text">Nous n'avons pas pu confirmer votre inscription.</span>
           </div>
         </div>
         <div></div>
-        <div id="success-message" class="sib-form-message-panel" style="font-size:13px;text-align:left;font-family:'DM Sans',sans-serif;color:#085229;background:#e7faf0;border-radius:4px;border-color:#13ce66;max-width:480px;margin-bottom:10px;">
+        <div id="success-message" class="sib-form-message-panel" style="font-size:13px;text-align:left;font-family:'DM Sans',sans-serif;color:#085229;background-color:#e7faf0;border-color:#13ce66;border-radius:4px;max-width:480px;">
           <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-            <span class="sib-form-message-panel__inner-text">✓ Merci ! Vérifiez votre boîte mail pour confirmer votre inscription.</span>
+            <span class="sib-form-message-panel__inner-text">Merci ! Vérifiez votre boîte mail pour confirmer votre inscription.</span>
           </div>
         </div>
         <div></div>
-        <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center;background:transparent;max-width:480px;border-width:0;direction:ltr">
+        <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center;background-color:transparent;max-width:480px;border-width:0px;direction:ltr">
           <form id="sib-form" method="POST" action="https://c2330ae1.sibforms.com/serve/MUIFAEXjbO9ZV54MWWykhYkgxHVzs7UP3_olNVfpuRpZ6tp7otO_z_7LFh16QfFfYOeAVkHrS0jDn0mvchAY45FXiNZdZ07WCFz4YYOy-4NzxRgNogwHVOml4B8A18uxYhxCxe5u26YJOm-Zi09nsEJiq0739DHXoTZl9IJH2S_T-0STXJx7w3wrw7U2DNDGv1m-VeTWvJOwkmdsQg==" data-type="subscription">
-            <div style="padding:4px 0;">
+            <div style="padding:8px 0;">
               <div class="sib-input sib-form-block">
                 <div class="form__entry entry_block">
                   <div class="form__label-row">
+                    <label class="entry__label" style="display:none;" for="EMAIL">Email</label>
                     <div class="entry__field">
-                      <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="votre@cabinet.fr" data-required="true" required/>
+                      <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="votre@cabinet.fr" data-required="true" required />
                     </div>
                   </div>
-                  <label class="entry__error entry__error--primary" style="font-size:12px;text-align:left;font-family:'DM Sans',sans-serif;color:#661d1d;background:#ffeded;border-radius:4px;border-color:#ff4949;"></label>
+                  <label class="entry__error entry__error--primary" style="font-size:12px;text-align:left;font-family:'DM Sans',sans-serif;color:#661d1d;background-color:#ffeded;border-radius:3px;border-color:#ff4949;"></label>
                 </div>
               </div>
             </div>
-            <div style="padding:4px 0;margin-top:16px;">
-              <div class="sib-optin sib-form-block">
+            <div style="padding:8px 0;">
+              <div class="sib-optin sib-form-block" data-required="true">
                 <div class="form__entry entry_mcq">
                   <div class="form__label-row">
                     <div class="entry__choice">
                       <label>
-                        <input type="checkbox" class="input_replaced" value="1" id="RGPD" name="RGPD" required/>
+                        <input type="checkbox" class="input_replaced" value="1" id="RGPD" name="RGPD" required />
                         <span class="checkbox checkbox_tick_positive"></span>
-                        <span style="font-size:12px;text-align:left;font-family:'DM Sans',sans-serif;color:var(--txt2);">J'accepte de recevoir vos e-mails et confirme avoir pris connaissance de votre <a href="confidentialite.html" style="color:var(--vert);">politique de confidentialité</a>. <em style="color:var(--txt3);font-size:11px;">Désabonnement possible à tout moment.</em></span>
+                        <span style="font-size:12px;text-align:left;font-family:'DM Sans',sans-serif;color:#5A5A52;">J'accepte de recevoir vos e-mails et confirme avoir pris connaissance de votre <a href="confidentialite.html" style="color:#2D5A3D;">politique de confidentialité</a>. <em style="color:#9A9A90;font-size:11px;">Désabonnement possible à tout moment.</em></span>
                       </label>
                     </div>
                   </div>
-                  <label class="entry__error entry__error--primary" style="font-size:12px;text-align:left;font-family:'DM Sans',sans-serif;color:#661d1d;background:#ffeded;border-radius:4px;border-color:#ff4949;"></label>
+                  <label class="entry__error entry__error--primary" style="font-size:12px;text-align:left;font-family:'DM Sans',sans-serif;color:#661d1d;background-color:#ffeded;border-radius:3px;border-color:#ff4949;"></label>
                 </div>
               </div>
             </div>
-            <div style="padding:20px 0;text-align:center;">
-              <button type="submit" class="sib-form-block__button">REJOINDRE LA BÊTA PRIVÉE</button>
+            <div style="padding:8px 0;">
+              <div class="sib-form-block" style="text-align:center;">
+                <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+                  <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                    <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                  </svg>
+                  REJOINDRE LA BÊTA PRIVÉE
+                </button>
+              </div>
             </div>
             <input type="text" name="email_address_check" value="" class="input--hidden">
             <input type="hidden" name="locale" value="fr">
@@ -417,7 +426,7 @@ var AUTOHIDE=Boolean(0);
 </script>
 
 <!-- Script Brevo SANS defer pour chargement synchrone -->
-<script src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 <script>
 function toggleFaq(el){
